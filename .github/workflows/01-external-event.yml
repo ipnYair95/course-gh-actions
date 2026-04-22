@@ -1,14 +1,12 @@
-# 01-event-schedule.yml
+# 01-event-repository-dispatch.yml
 
-name: "01 event schedule"
-
+name: "01 event repository dispatch" 
 on:
-    schedule:
-        - cron: '21 1 22 3 *'
-
+    repository_dispatch:
+        types: [say_hi_event]
 jobs:
     say-hi:
         runs-on: ubuntu-latest
         steps:
-            - name: hi
-              run: echo "hola amigos"
+            - name: say hi
+              run: echo "Hola ${{github.event.client_payload.name}}"
