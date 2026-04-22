@@ -1,0 +1,14 @@
+# 01-event-schedule.yml
+
+name: "01 event schedule"
+
+on:
+    schedule:
+        - cron: '21 1 22 3 *'
+
+jobs:
+    say-hi:
+        runs-on: ubuntu-latest
+        steps:
+            - name: hi
+              run: echo "hola amigos"
