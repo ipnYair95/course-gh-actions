@@ -14,4 +14,4 @@ jobs:
         - name: "this is a other step"
           uses: odonML/octo-say@v2 # action ejecution
           with:
-            message: "hello, world bandamax" # param for action
+            message: "hello, world yair" # param for action
